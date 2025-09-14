@@ -1,43 +1,34 @@
 <html>
-    <head>
-        <style>
-            .imo{
-                width:10px;
-                height:10px;
-                background-color:red;
-                border-radius:50%;
-            }
-        
-        </style>
-    </head>
-    <body>
-        <div class="imo"></div>
-        <script>
-            var elementimo=document.querySelector(".imo")
-            document.body.addEventListener("mousemove",function(e){
-                  myFunction(e)
-                
-            })
-               function myFunction(event){
-                      elementimo.style.position="absolute";
-                      var x=event.clientX;
-                      var y=event.clientY;
-                      var offsetw=elementimo.offsetWidth;
-                      var offseth = elementimo.offsetHeight;
-                    //   elementimo.style.top=y+offsetw +"px";
-                    //   elementimo.style.left=x+offseth+"px";
-                      elementimo.style.transform=`translate(${x +offsetw}px,${y +offseth}px) translate(-50%,-50%)`
-                    
-                      console.log(x,y);
-                      console.log(offsetw,offsetw)
-                    
-                }
+  <head>
+    <style>
+      .imo {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="imo"></div>
+    <script>
+      var elementimo = document.querySelector(".imo");
+      document.body.addEventListener("mousemove", myFunction);
+      function myFunction(event) {
+        elementimo.style.position = "absolute";
+        var x = event.clientX;
+        var y = event.clientY;
+        var offsetw = elementimo.offsetWidth;
+        var offseth = elementimo.offsetHeight;
+        //   elementimo.style.top=y+offsetw +"px";
+        //   elementimo.style.left=x+offseth+"px";
+        elementimo.style.transform = `translate(${x + offsetw}px,${
+          y + offseth
+        }px) translate(-50%,-50%)`;
 
-                
-        
-                
-        
-        
-        </script>
-    </body>
+        console.log(x, y);
+        console.log(offsetw, offsetw);
+      }
+    </script>
+  </body>
 </html>
