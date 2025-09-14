@@ -397,10 +397,13 @@
       }
       showfilm(infoFilm.data);
 
-      var ArryDESCImb = [...infoFilm.data].sort(function (current, next) {
+      var ArryDESCImb = infoFilm.data.toSorted(function (current, next) {
         return next.imdb_rating - current.imdb_rating;
       });
-      var ArrASCImb = [...infoFilm.data].sort(function (current, next) {
+      // var ArrASCImb = [...infoFilm.data].sort(function (current, next) {
+      //   return current.imdb_rating - next.imdb_rating;
+      // });
+      var ArrASCImb = infoFilm.data.toSorted(function (current, next) {
         return current.imdb_rating - next.imdb_rating;
       });
       var ArrayDrama = infoFilm.data.filter(function (item) {
